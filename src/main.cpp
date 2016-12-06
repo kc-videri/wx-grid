@@ -17,15 +17,14 @@
  * with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-//#include <wx-grid.h>
 #include "wx-grid-app.h"
+#include "wx-grid-frame.h"
 
 bool MyApp::OnInit()
 {
-	wxFrame *frame = new wxFrame((wxFrame *)NULL, -1, "Hello World",
-		wxPoint(50, 50), wxSize(450, 340));
-
+	WXGridFrame *frame = new WXGridFrame("Hello World", wxPoint(50, 50), wxSize(450, 340));
 	frame->Show(TRUE);
+
 	return TRUE;
 }
 

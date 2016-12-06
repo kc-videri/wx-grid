@@ -20,7 +20,9 @@ bin_PROGRAMS = wx_grid
 wx_grid_SOURCES = \
 	main.cpp \
 	wx-grid-app.h \
-	wx-grid.h
+	wx-grid.h \
+	wx-grid-frame.cpp \
+	wx-grid-frame.h
 
 wx_grid_LDFLAGS = 
 
