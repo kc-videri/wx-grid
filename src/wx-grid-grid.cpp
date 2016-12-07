@@ -18,6 +18,7 @@
  */
 
 #include "wx-grid-grid.h"
+#include "wx-grid-grid_private.h"
 
 WXGridGrid::WXGridGrid(WXGridFrame * parent):
     wxGrid(parent, wxID_ANY)
@@ -34,4 +35,37 @@ WXGridGrid::WXGridGrid(WXGridFrame * parent):
     for (int i = 0; i < columns; i++) {
         this->SetRowSize(i, 25);
     }
+}
+
+void WXGridGrid::event(wxGridEvent& event)
+{
+    fprintf(stderr, "%s::%s(%d): column: %d; row; %d; id: %d; event type %d\n", __FILE__, __FUNCTION__, __LINE__, event.GetCol(), event.GetRow(), event.GetId(), event.GetEventType()); // DELETE 
+}
+
+void WXGridGrid::resizeEvent(wxGridSizeEvent& event)
+{
+    fprintf(stderr, "%s::%s(%d): \n", __FILE__, __FUNCTION__, __LINE__); // DELETE 
+    //fprintf(stderr, "%s::%s(%d): column: %d; row; %d; id: %d; event type %d\n", __FILE__, __FUNCTION__, __LINE__, event.GetCol(), event.GetRow(), event.GetId(), event.GetEventType()); // DELETE 
+}
+
+void WXGridGrid::rangeSelectEvent(wxGridRangeSelectEvent& event)
+{
+    fprintf(stderr, "%s::%s(%d): \n", __FILE__, __FUNCTION__, __LINE__); // DELETE 
+    //fprintf(stderr, "%s::%s(%d): column: %d; row; %d; id: %d; event type %d\n", __FILE__, __FUNCTION__, __LINE__, event.GetCol(), event.GetRow(), event.GetId(), event.GetEventType()); // DELETE 
+}
+
+void WXGridGrid::editorHiddenEvent(wxGridEvent& event)
+{
+    fprintf(stderr, "%s::%s(%d): column: %d; row; %d; id: %d; event type %d\n", __FILE__, __FUNCTION__, __LINE__, event.GetCol(), event.GetRow(), event.GetId(), event.GetEventType()); // DELETE 
+}
+
+void WXGridGrid::editorShownEvent(wxGridEvent& event)
+{
+    fprintf(stderr, "%s::%s(%d): column: %d; row; %d; id: %d; event type %d\n", __FILE__, __FUNCTION__, __LINE__, event.GetCol(), event.GetRow(), event.GetId(), event.GetEventType()); // DELETE 
+}
+
+void WXGridGrid::editorCreatedEvent(wxGridEditorCreatedEvent& event)
+{
+    fprintf(stderr, "%s::%s(%d): \n", __FILE__, __FUNCTION__, __LINE__); // DELETE 
+    //fprintf(stderr, "%s::%s(%d): column: %d; row; %d; id: %d; event type %d\n", __FILE__, __FUNCTION__, __LINE__, event.GetCol(), event.GetRow(), event.GetId(), event.GetEventType()); // DELETE 
 }

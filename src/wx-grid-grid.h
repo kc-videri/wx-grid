@@ -31,6 +31,15 @@ class WXGridGrid:public wxGrid {
  protected:
 
  private:
+    void event(wxGridEvent& event);
+    void resizeEvent(wxGridSizeEvent& event);
+    void rangeSelectEvent(wxGridRangeSelectEvent& event);
+
+    void editorHiddenEvent(wxGridEvent& event);
+    void editorShownEvent(wxGridEvent& event);
+    void editorCreatedEvent(wxGridEditorCreatedEvent& event);
+
+     wxDECLARE_EVENT_TABLE();
 
 };
 

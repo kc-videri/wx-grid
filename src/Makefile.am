@@ -25,7 +25,8 @@ wx_grid_SOURCES = \
 	wx-grid-frame.h \
 	wx-grid-frame_private.h \
 	wx-grid-grid.cpp \
-	wx-grid-grid.h
+	wx-grid-grid.h \
+	wx-grid-grid_private.h
 
 wx_grid_LDFLAGS = 
 
