@@ -19,6 +19,7 @@
 
 #include "wx-grid-frame.h"
 #include "wx-grid-frame_private.h"
+#include "wx-grid-grid.h"
 
 WXGridFrame::WXGridFrame(const wxString & title, const wxPoint & pos, const wxSize & size):
     wxFrame(NULL, wxID_ANY, title, pos, size)
@@ -26,9 +27,10 @@ WXGridFrame::WXGridFrame(const wxString & title, const wxPoint & pos, const wxSi
     wxMenu *menuFile;
     wxMenu *menuHelp;
     wxMenuBar *menuBar;
+    WXGridGrid *grid;
 
     menuFile = new wxMenu;
-    menuFile->Append(ID_Hello, "&Hello...\tCtrl-H", "Help string shown in status bar for this menu item");
+    //menuFile->Append(ID_Hello, "&Hello...\tCtrl-H", "Help string shown in status bar for this menu item");
     menuFile->AppendSeparator();
     menuFile->Append(wxID_EXIT);
 
@@ -41,14 +43,11 @@ WXGridFrame::WXGridFrame(const wxString & title, const wxPoint & pos, const wxSi
     menuBar->Append(menuHelp, "&Help");
     SetMenuBar(menuBar);
 
+		grid = new WXGridGrid(this);
+
     // status bar
     CreateStatusBar();
-    SetStatusText("Welcome to wxWidgets!");
-}
-
-void WXGridFrame::OnHello(wxCommandEvent & event)
-{
-    wxLogMessage("Hello world from wxWidgets!");
+    SetStatusText("Welcome to wxwidget grid sample!");
 }
 
 void WXGridFrame::OnExit(wxCommandEvent & event)
@@ -58,5 +57,5 @@ void WXGridFrame::OnExit(wxCommandEvent & event)
 
 void WXGridFrame::OnAbout(wxCommandEvent & event)
 {
-    wxMessageBox("This is a wxWidgets' Hello world sample", "About Hello World", wxOK | wxICON_INFORMATION);
+    wxMessageBox("This is a wxGrid test sample", "About wxGrid", wxOK | wxICON_INFORMATION);
 }

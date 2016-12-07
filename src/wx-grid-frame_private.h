@@ -20,12 +20,14 @@
 #ifndef _WX_GRID_FRAME_PRIVATE_H_
 #define _WX_GRID_FRAME_PRIVATE_H_
 
+#if 0
 enum {
     ID_Hello = 1
 };
+#endif
 
 wxBEGIN_EVENT_TABLE (WXGridFrame, wxFrame)
-    EVT_MENU (ID_Hello, WXGridFrame::OnHello)
+    //EVT_MENU (ID_Hello, WXGridFrame::OnHello)
     EVT_MENU (wxID_EXIT, WXGridFrame::OnExit)
     EVT_MENU (wxID_ABOUT, WXGridFrame::OnAbout)
 wxEND_EVENT_TABLE ()
