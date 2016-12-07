@@ -18,16 +18,7 @@
  */
 
 #include "wx-grid-frame.h"
-
-enum {
-    ID_Hello = 1
-};
-
-wxBEGIN_EVENT_TABLE (WXGridFrame, wxFrame)
-    EVT_MENU (ID_Hello, WXGridFrame::OnHello)
-    EVT_MENU (wxID_EXIT, WXGridFrame::OnExit)
-    EVT_MENU (wxID_ABOUT, WXGridFrame::OnAbout)
-wxEND_EVENT_TABLE ()
+#include "wx-grid-frame_private.h"
 
 WXGridFrame::WXGridFrame(const wxString & title, const wxPoint & pos, const wxSize & size):
     wxFrame(NULL, wxID_ANY, title, pos, size)
@@ -35,7 +26,7 @@ WXGridFrame::WXGridFrame(const wxString & title, const wxPoint & pos, const wxSi
     wxMenu *menuFile;
     wxMenu *menuHelp;
     wxMenuBar *menuBar;
-    
+
     menuFile = new wxMenu;
     menuFile->Append(ID_Hello, "&Hello...\tCtrl-H", "Help string shown in status bar for this menu item");
     menuFile->AppendSeparator();
@@ -62,10 +53,10 @@ void WXGridFrame::OnHello(wxCommandEvent & event)
 
 void WXGridFrame::OnExit(wxCommandEvent & event)
 {
-    wxMessageBox("This is a wxWidgets' Hello world sample", "About Hello World", wxOK | wxICON_INFORMATION);
+    Close(true);
 }
 
 void WXGridFrame::OnAbout(wxCommandEvent & event)
 {
-    Close(true);
+    wxMessageBox("This is a wxWidgets' Hello world sample", "About Hello World", wxOK | wxICON_INFORMATION);
 }
