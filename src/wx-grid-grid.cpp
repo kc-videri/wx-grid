@@ -37,21 +37,14 @@ WXGridGrid::WXGridGrid(WXGridFrame * parent):
     }
 }
 
-void WXGridGrid::event(wxGridEvent& event)
+void WXGridGrid::cellChangeEvent(wxGridEvent& event)
 {
     fprintf(stderr, "%s::%s(%d): column: %d; row; %d; id: %d; event type %d\n", __FILE__, __FUNCTION__, __LINE__, event.GetCol(), event.GetRow(), event.GetId(), event.GetEventType()); // DELETE 
 }
 
-void WXGridGrid::resizeEvent(wxGridSizeEvent& event)
+void WXGridGrid::cellChangingEvent(wxGridEvent& event)
 {
-    fprintf(stderr, "%s::%s(%d): \n", __FILE__, __FUNCTION__, __LINE__); // DELETE 
-    //fprintf(stderr, "%s::%s(%d): column: %d; row; %d; id: %d; event type %d\n", __FILE__, __FUNCTION__, __LINE__, event.GetCol(), event.GetRow(), event.GetId(), event.GetEventType()); // DELETE 
-}
-
-void WXGridGrid::rangeSelectEvent(wxGridRangeSelectEvent& event)
-{
-    fprintf(stderr, "%s::%s(%d): \n", __FILE__, __FUNCTION__, __LINE__); // DELETE 
-    //fprintf(stderr, "%s::%s(%d): column: %d; row; %d; id: %d; event type %d\n", __FILE__, __FUNCTION__, __LINE__, event.GetCol(), event.GetRow(), event.GetId(), event.GetEventType()); // DELETE 
+    fprintf(stderr, "%s::%s(%d): column: %d; row; %d; id: %d; event type %d\n", __FILE__, __FUNCTION__, __LINE__, event.GetCol(), event.GetRow(), event.GetId(), event.GetEventType()); // DELETE 
 }
 
 void WXGridGrid::editorHiddenEvent(wxGridEvent& event)
@@ -67,5 +60,90 @@ void WXGridGrid::editorShownEvent(wxGridEvent& event)
 void WXGridGrid::editorCreatedEvent(wxGridEditorCreatedEvent& event)
 {
     fprintf(stderr, "%s::%s(%d): \n", __FILE__, __FUNCTION__, __LINE__); // DELETE 
-    //fprintf(stderr, "%s::%s(%d): column: %d; row; %d; id: %d; event type %d\n", __FILE__, __FUNCTION__, __LINE__, event.GetCol(), event.GetRow(), event.GetId(), event.GetEventType()); // DELETE 
 }
+
+void WXGridGrid::cellLeftClickEvent(wxGridEvent& event)
+{
+    fprintf(stderr, "%s::%s(%d): column: %d; row; %d; id: %d; event type %d\n", __FILE__, __FUNCTION__, __LINE__, event.GetCol(), event.GetRow(), event.GetId(), event.GetEventType()); // DELETE 
+}
+
+void WXGridGrid::cellRightClickEvent(wxGridEvent& event)
+{
+    fprintf(stderr, "%s::%s(%d): column: %d; row; %d; id: %d; event type %d\n", __FILE__, __FUNCTION__, __LINE__, event.GetCol(), event.GetRow(), event.GetId(), event.GetEventType()); // DELETE 
+}
+
+void WXGridGrid::cellLeftCclickEvent(wxGridEvent& event)
+{
+    fprintf(stderr, "%s::%s(%d): column: %d; row; %d; id: %d; event type %d\n", __FILE__, __FUNCTION__, __LINE__, event.GetCol(), event.GetRow(), event.GetId(), event.GetEventType()); // DELETE 
+}
+
+void WXGridGrid::cellRightDclickEvent(wxGridEvent& event)
+{
+    fprintf(stderr, "%s::%s(%d): column: %d; row; %d; id: %d; event type %d\n", __FILE__, __FUNCTION__, __LINE__, event.GetCol(), event.GetRow(), event.GetId(), event.GetEventType()); // DELETE 
+}
+
+void WXGridGrid::labelLeftClickEvent(wxGridEvent& event)
+{
+    fprintf(stderr, "%s::%s(%d): column: %d; row; %d; id: %d; event type %d\n", __FILE__, __FUNCTION__, __LINE__, event.GetCol(), event.GetRow(), event.GetId(), event.GetEventType()); // DELETE 
+}
+
+void WXGridGrid::labelRightClickEvent(wxGridEvent& event)
+{
+    fprintf(stderr, "%s::%s(%d): column: %d; row; %d; id: %d; event type %d\n", __FILE__, __FUNCTION__, __LINE__, event.GetCol(), event.GetRow(), event.GetId(), event.GetEventType()); // DELETE 
+}
+
+void WXGridGrid::labelLeftDclickEvent(wxGridEvent& event)
+{
+    fprintf(stderr, "%s::%s(%d): column: %d; row; %d; id: %d; event type %d\n", __FILE__, __FUNCTION__, __LINE__, event.GetCol(), event.GetRow(), event.GetId(), event.GetEventType()); // DELETE 
+}
+
+void WXGridGrid::labelRightDclickEvent(wxGridEvent& event)
+{
+    fprintf(stderr, "%s::%s(%d): column: %d; row; %d; id: %d; event type %d\n", __FILE__, __FUNCTION__, __LINE__, event.GetCol(), event.GetRow(), event.GetId(), event.GetEventType()); // DELETE 
+}
+
+void WXGridGrid::selectCellEvent(wxGridEvent& event)
+{
+    fprintf(stderr, "%s::%s(%d): column: %d; row; %d; id: %d; event type %d\n", __FILE__, __FUNCTION__, __LINE__, event.GetCol(), event.GetRow(), event.GetId(), event.GetEventType()); // DELETE 
+}
+
+void WXGridGrid::colSizeEvent(wxGridSizeEvent& event)
+{
+    fprintf(stderr, "%s::%s(%d): id: %d; event type %d\n", __FILE__, __FUNCTION__, __LINE__, event.GetId(), event.GetEventType()); // DELETE 
+}
+
+void WXGridGrid::rowSizeEvent(wxGridSizeEvent& event)
+{
+    fprintf(stderr, "%s::%s(%d): id: %d; event type %d\n", __FILE__, __FUNCTION__, __LINE__, event.GetId(), event.GetEventType()); // DELETE 
+}
+
+void WXGridGrid::rangeSelectEvent(wxGridRangeSelectEvent& event)
+{
+    fprintf(stderr, "%s::%s(%d): id: %d; event type %d\n", __FILE__, __FUNCTION__, __LINE__, event.GetId(), event.GetEventType()); // DELETE 
+}
+
+void WXGridGrid::cellChangedEvent(wxGridEvent& event)
+{
+    fprintf(stderr, "%s::%s(%d): column: %d; row; %d; id: %d; event type %d\n", __FILE__, __FUNCTION__, __LINE__, event.GetCol(), event.GetRow(), event.GetId(), event.GetEventType()); // DELETE 
+}
+
+void WXGridGrid::cellBeginDragEvent(wxGridEvent& event)
+{
+    fprintf(stderr, "%s::%s(%d): column: %d; row; %d; id: %d; event type %d\n", __FILE__, __FUNCTION__, __LINE__, event.GetCol(), event.GetRow(), event.GetId(), event.GetEventType()); // DELETE 
+}
+
+void WXGridGrid::colMoveEvent(wxGridEvent& event)
+{
+    fprintf(stderr, "%s::%s(%d): column: %d; row; %d; id: %d; event type %d\n", __FILE__, __FUNCTION__, __LINE__, event.GetCol(), event.GetRow(), event.GetId(), event.GetEventType()); // DELETE 
+}
+
+void WXGridGrid::colSortEvent(wxGridEvent& event)
+{
+    fprintf(stderr, "%s::%s(%d): column: %d; row; %d; id: %d; event type %d\n", __FILE__, __FUNCTION__, __LINE__, event.GetCol(), event.GetRow(), event.GetId(), event.GetEventType()); // DELETE 
+}
+
+void WXGridGrid::tabbingEvent(wxGridEvent& event)
+{
+    fprintf(stderr, "%s::%s(%d): column: %d; row; %d; id: %d; event type %d\n", __FILE__, __FUNCTION__, __LINE__, event.GetCol(), event.GetRow(), event.GetId(), event.GetEventType()); // DELETE 
+}
+

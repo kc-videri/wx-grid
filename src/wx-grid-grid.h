@@ -31,16 +31,31 @@ class WXGridGrid:public wxGrid {
  protected:
 
  private:
-    void event(wxGridEvent& event);
-    void resizeEvent(wxGridSizeEvent& event);
-    void rangeSelectEvent(wxGridRangeSelectEvent& event);
+    void cellChangeEvent(wxGridEvent& event);
+    void cellChangingEvent(wxGridEvent& event);
 
     void editorHiddenEvent(wxGridEvent& event);
     void editorShownEvent(wxGridEvent& event);
     void editorCreatedEvent(wxGridEditorCreatedEvent& event);
 
+    void cellLeftClickEvent(wxGridEvent& event);
+    void cellRightClickEvent(wxGridEvent& event);
+    void cellLeftCclickEvent(wxGridEvent& event);
+    void cellRightDclickEvent(wxGridEvent& event);
+    void labelLeftClickEvent(wxGridEvent& event);
+    void labelRightClickEvent(wxGridEvent& event);
+    void labelLeftDclickEvent(wxGridEvent& event);
+    void labelRightDclickEvent(wxGridEvent& event);
+    void selectCellEvent(wxGridEvent& event);
+    void colSizeEvent(wxGridSizeEvent& event);
+    void rowSizeEvent(wxGridSizeEvent& event);
+    void rangeSelectEvent(wxGridRangeSelectEvent& event);
+    void cellChangedEvent(wxGridEvent& event);
+    void cellBeginDragEvent(wxGridEvent& event);
+    void colMoveEvent(wxGridEvent& event);
+    void colSortEvent(wxGridEvent& event);
+    void tabbingEvent(wxGridEvent& event);
      wxDECLARE_EVENT_TABLE();
-
 };
 
 #endif                          // _WX_GRID_GRID_H_
